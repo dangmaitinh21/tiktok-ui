@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -11,6 +11,9 @@
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
+
+    // Font
+    --font-family: 'Open Sans', sans-serif;
 }
 
 * {
@@ -24,7 +27,7 @@ html {
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -40,4 +43,27 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+// Custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
 }

@@ -13,7 +13,7 @@ import {
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Buttons';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -21,7 +21,7 @@ import Menu from '~/components/Popper/Menu';
 import { faKeyboard } from '@fortawesome/free-regular-svg-icons';
 import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Image';
-import Search from '~/components/Layout/components/Search';
+import Search from '~/layouts/components/Search';
 
 const cx = classNames.bind(styles);
 
@@ -96,7 +96,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 
@@ -131,7 +131,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p9-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/1630317066136578.jpeg?x-expires=1653656400&x-signature=8B1%2F1UkHlb2ap2wqX82ofHGSnZs%3D"
+                                src="https://i.pinimg.com/564x/a5/23/92/a52392470b2752b6b674d43829d38bba.jpg"
                                 className={cx('user-avatar')}
                                 alt="name account"
                             />

@@ -29,6 +29,11 @@
     margin-left: 10px;
 }
 
+.icon,
+.active-icon {
+    display: flex;
+}
+
 .active-icon {
     display: none;
 }
